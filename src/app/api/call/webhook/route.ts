@@ -5,10 +5,6 @@ export async function POST() {
   try {
     const twimlResponse = new VoiceResponse();
 
-    twimlResponse.say("We are connecting your call to the AI voice assistant.");
-    twimlResponse.pause({ length: 1 });
-    twimlResponse.say("OK, you can start talking!");
-
     const twimlConnect = twimlResponse.connect();
     twimlConnect.stream({ url: process.env.WS_SERVER_URL });
 

@@ -63,7 +63,8 @@ export function useHandleServerEvent({
     } else if (functionCallParams.name === "transferAgents") {
       const destinationAgent = args.destination_agent;
       const newAgentConfig =
-        selectedAgentConfigSet?.find((a) => a.name === destinationAgent) || null;
+        selectedAgentConfigSet?.find((a) => a.name === destinationAgent) ||
+        null;
       if (newAgentConfig) {
         setSelectedAgentName(destinationAgent);
       }

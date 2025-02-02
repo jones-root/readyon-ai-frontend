@@ -6,7 +6,7 @@ export async function POST() {
   try {
     const call = await twilio.calls.create({
       url: process.env.TWILIO_PHONE_WEBHOOK_URL,
-      to: "+5511934732016",
+      to: process.env.TWILIO_TARGET_PHONE!,
       from: process.env.TWILIO_PHONE!,
     });
 
